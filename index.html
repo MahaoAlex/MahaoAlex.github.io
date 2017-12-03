@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/02/docker-for-mac/" itemprop="url">docker-for-mac</a></h1>
+                <a class="post-title-link" href="/2017/12/02/docker-for-mac/" itemprop="url">macOS安装docker</a></h1>
         
 
         <div class="post-meta">
@@ -341,8 +341,43 @@
 </ul>
 <img src="/2017/12/02/docker-for-mac/docker-for-mac.png" title="傻瓜式安装">
 <img src="/2017/12/02/docker-for-mac/docker-need-privileged.png" title="安装过程中需要输密码赋权限">
-<h2 id="关键特性介绍"><a href="#关键特性介绍" class="headerlink" title="关键特性介绍"></a>关键特性介绍</h2><ul>
-<li>​</li>
+<ul>
+<li>安装完成后，系统中增加了如下表所示的二进制文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>二进制名称</th>
+<th>二进制大致作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker</td>
+<td>A self-sufficient runtime for containers。The base command for Docker CLI</td>
+</tr>
+<tr>
+<td>docker-compose</td>
+<td>多容器管理，主要解决容器部署的问题</td>
+</tr>
+<tr>
+<td>docker-machine</td>
+<td>Machine lets you create Docker hosts on your computer, on cloud providers, and inside your own data center. It creates servers, installs Docker on them, then configures the Docker client to talk to them</td>
+</tr>
+<tr>
+<td>docker-credential-osxkeychain</td>
+<td><a href="https://github.com/docker/docker-credential-helpers/releases" target="_blank" rel="external">docker credential helpers</a></td>
+</tr>
+</tbody>
+</table>
+<img src="/2017/12/02/docker-for-mac/docker-command.png" title="docker相关的二进制">
+<blockquote>
+<p>安装完来个hello-world是程序员的标准讨论，如果报错TLS handshake timeout，可以考虑One more try 或者来个梯子</p>
+</blockquote>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a href="https://segmentfault.com/a/1190000005106237" target="_blank" rel="external">Docker for Mac 初体验</a></li>
+<li><a href="https://segmentfault.com/a/1190000004556081" target="_blank" rel="external">MacOS上安装Docker</a></li>
+<li><a href="http://blog.csdn.net/yl_1314/article/details/53761049" target="_blank" rel="external">使用docker compose 部署服务</a></li>
 </ul>
 
           
