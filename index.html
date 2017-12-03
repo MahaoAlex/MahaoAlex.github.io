@@ -332,7 +332,8 @@
 </tbody>
 </table>
 <blockquote>
-<p>为什么会有版本差异？</p>
+<p>为什么会有版本差异？<br>官方解释：<a href="https://docs.docker.com/docker-for-mac/docker-toolbox/" target="_blank" rel="external">Docker for Mac vs. Docker Toolbox</a><br>Docker ToolBox 实际上是使用VirtualBox在Mac中创建一个VM（default)，并通过docker-machine管理这个VM。这个VM运行的是boot2docker的Linux发行版。运行<code>docker</code>和<code>docker-compose</code>命令前需要通过执行<code>eval $(docker-machine env default)</code>命令指定对应的docker machine</p>
+<p>Docker for Mac 使用的是基于<code>Hypervisor.framework</code>开发的轻量级的虚拟化工具包<code>Hyperkit</code>。<code>Hypervisor.framework</code>是在macos 10.10.3之后才有的东西。</p>
 </blockquote>
 <p>本次安装基于版本<code>macOS High Sierra 10.13.1</code></p>
 <h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
@@ -372,12 +373,33 @@
 </table>
 <img src="/2017/12/02/docker-for-mac/docker-command.png" title="docker相关的二进制">
 <blockquote>
-<p>安装完来个hello-world是程序员的标准讨论，如果报错TLS handshake timeout，可以考虑One more try 或者来个梯子</p>
+<p>安装完来个hello-world是程序员的标准套路，<code>docker run hello-world</code>如果报错TLS handshake timeout，可以考虑Once more 或者来个梯子</p>
 </blockquote>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><ul>
+<li><p>Docker for mac 提供了图形化的界面进行基础配置。</p>
+<p>可参考<a href="https://docs.docker.com/docker-for-mac/#preferences" target="_blank" rel="external">Preference</a>进行配置，主要的配置包括</p>
+<ul>
+<li>Docker for mac 对应的VM的实时备份（默认不开启）</li>
+<li>共享文件，只有此处进行配置的目录才能够挂载到容器中</li>
+<li>Docker for Mac 占用的CPU和内存占用，以及虚拟机子网网段</li>
+<li>代理配置，默认系统代理</li>
+<li>私有仓库配置</li>
+<li>Docker Enginee配置文件自定义</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
+<li>自动补全<ul>
+<li>bash 参考<a href="https://docs.docker.com/docker-for-mac/#install-bash-completion" target="_blank" rel="external">install bash completion</a></li>
+<li>zsh 参考<a href="https://www.cnblogs.com/zlzlnet/p/6109907.html" target="_blank" rel="external">zsh下docker命令tab补全方法</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
 <li><a href="https://segmentfault.com/a/1190000005106237" target="_blank" rel="external">Docker for Mac 初体验</a></li>
 <li><a href="https://segmentfault.com/a/1190000004556081" target="_blank" rel="external">MacOS上安装Docker</a></li>
 <li><a href="http://blog.csdn.net/yl_1314/article/details/53761049" target="_blank" rel="external">使用docker compose 部署服务</a></li>
+<li><a href="https://www.cnblogs.com/zlzlnet/p/6109907.html" target="_blank" rel="external">zsh下docker命令tab补全方法</a></li>
 </ul>
 
           
