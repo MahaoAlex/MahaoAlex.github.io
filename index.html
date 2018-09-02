@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="正启航，还不晚">
+<meta name="description" content="Alex的个人博客站点，分享Alex的生活、学习与思考。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog of Alex">
 <meta property="og:url" content="http://blog.alexrun.top/index.html">
 <meta property="og:site_name" content="Blog of Alex">
-<meta property="og:description" content="正启航，还不晚">
+<meta property="og:description" content="Alex的个人博客站点，分享Alex的生活、学习与思考。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog of Alex">
-<meta name="twitter:description" content="正启航，还不晚">
+<meta name="twitter:description" content="Alex的个人博客站点，分享Alex的生活、学习与思考。">
 
 
 
@@ -360,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.alexrun.top/2018/05/04/cci-api/">
+    <link itemprop="mainEntityOfPage" href="http://blog.alexrun.top/2018/05/04/backup/cci-api/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex">
@@ -379,7 +379,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/04/cci-api/" itemprop="url">华为云云容器实例服务级联删除验证</a></h1>
+                <a class="post-title-link" href="/2018/05/04/backup/cci-api/" itemprop="url">华为云云容器实例服务级联删除验证</a></h1>
         
 
         <div class="post-meta">
@@ -441,12 +441,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -k -X GET -H &quot;X-Auth-Token:$token&quot; -H &quot;Content-Type:application/json&quot; https://cci.cn-north-1.myhuaweicloud.com:443/apis/apps/v1beta1/namespaces/$project_id/deployments/$deployment_name</span><br></pre></td></tr></table></figure>
 <h2 id="查询所有的pod信息"><a href="#查询所有的pod信息" class="headerlink" title="查询所有的pod信息"></a>查询所有的pod信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -k -X GET -H &quot;X-Auth-Token:$token&quot; -H &quot;Content-Type:application/json&quot; https://cci.cn-north-1.myhuaweicloud.com:443/api/v1/namespaces/$project_id/pods</span><br></pre></td></tr></table></figure>
 <h2 id="非级联删除无状态负载"><a href="#非级联删除无状态负载" class="headerlink" title="非级联删除无状态负载"></a>非级联删除无状态负载</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -k -XDELETE -H &quot;X-Auth-Token:$token&quot; -H &quot;Content-Type:application/json&quot; https://cci.cn-north-1.myhuaweicloud.com:443/apis/apps/v1beta1/namespaces/$project_id/deployments/$deployment_name</span><br></pre></td></tr></table></figure>
-<img src="/2018/05/04/cci-api/delete-orphan.png" title="删除结果">
+<img src="/2018/05/04/backup/cci-api/delete-orphan.png" title="删除结果">
 <h2 id="级联删除"><a href="#级联删除" class="headerlink" title="级联删除"></a>级联删除</h2><p>deployment_name=alex-test2</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -k -XDELETE -d @backend.json -H &quot;X-Auth-Token:$token&quot; -H &quot;Content-Type:application/json&quot; https://cci.cn-north-1.myhuaweicloud.com:443/apis/apps/v1beta1/namespaces/$project_id/deployments/$deployment_name</span><br></pre></td></tr></table></figure>
 <p>​      backend.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;Kind&quot;: &quot;DeleteOptions&quot;,</span><br><span class="line">    &quot;apiVersion&quot;: &quot;v1&quot;,</span><br><span class="line">    &quot;propagationPolicy&quot;: &quot;Background&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<img src="/2018/05/04/cci-api/delete-backend-before.png" title="级联删除前">
-<img src="/2018/05/04/cci-api/delete-backend.png" title="级联删除后">
+<img src="/2018/05/04/backup/cci-api/delete-backend-before.png" title="级联删除前">
+<img src="/2018/05/04/backup/cci-api/delete-backend.png" title="级联删除后">
 
           
         
@@ -1568,7 +1568,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Alex</p>
-              <p class="site-description motion-element" itemprop="description">正启航，还不晚</p>
+              <p class="site-description motion-element" itemprop="description">Alex的个人博客站点，分享Alex的生活、学习与思考。</p>
           </div>
 
           <nav class="site-state motion-element">
